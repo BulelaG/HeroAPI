@@ -55,7 +55,7 @@ exports.create = async (req, res)=>{
 // CLEAR ALL HEROS
 exports.deleteAll = (req, res)=>{
 
-    User.deleteMany()
+    Hero.deleteMany()
         .then(data=>{
             res.send(data)
             console.log(data)
