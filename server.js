@@ -12,7 +12,7 @@ const db = require('./models')
 // origin: "http://localhost:8081"
 //};
 
-//app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(express.json());
 
