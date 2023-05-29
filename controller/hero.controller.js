@@ -75,13 +75,23 @@ exports.getOne = (req, res)=>{
            .then(data=>{
             res.send(data)
             console.log(data) })
-           .catch(error=>{
-            res.status(500).send("Could not find hero", error)
-            console.log("Could not find hero", error)
-           })
+            .catch((error) => {
+             res.status(500).send("Could not find hero", error);
+             console.log("Could not find hero", error);
+          });
 
         
 }
+// exports.getOne = (req, res) => {
+//     const id = req.params.id;
+  
+//     Hero.findById(id, { useFindAndModify: false })
+//       .then((data) => {
+//         res.send(data);
+//         console.log(data);
+//       })
+//       
+//   };
 
 
 
